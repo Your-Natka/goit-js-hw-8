@@ -17,9 +17,11 @@ populateTextarea();
 refs.form.addEventListener('input', throttle(onTextareaInput, 500));
 refs.form.addEventListener('submit', e => {
   e.preventDefault();
+
+  console.log(formData);
+  formData = {};
   localStorage.removeItem(STORAGE_KEY);
   e.currentTarget.reset();
-  console.log(formData);
 });
 function onTextareaInput(e) {
   formData[e.target.name] = e.target.value;
