@@ -19,7 +19,7 @@ refs.form.addEventListener('submit', e => {
   e.preventDefault();
 
   console.log(formData);
-  formData = {};
+   
   localStorage.removeItem(STORAGE_KEY);
   e.currentTarget.reset();
 });
